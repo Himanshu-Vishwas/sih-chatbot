@@ -31,9 +31,9 @@ const userMessage = [
     ["i dont know"],
     ["boring"],
     ["im tired"],
-    ["need help"],
+    ["need help","i need help"],
     ["police"],
-    ["i need to report a police case"],
+    ["i have lost my phone"],
     ["i need to report a police case"],
     ["My phone was stolen"],
   ];
@@ -75,7 +75,7 @@ const userMessage = [
     ["Take some rest!"],
     ["How can I help you?"],
     ["Please call 000"],
-    ["Sure, I can help you with that. Please provide me with some details about the incident."],
+    ["Sure, I can help you with that. Please provide me with some details about the incident. <a href='./forms/form1.html'>Click here to report</a>"],
     ["Of course, I can help you with that. Please provide me with some details about the incident."],
     ["I'm sorry to hear that. Please provide me with some details about the incident."]
   ];

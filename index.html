@@ -24,7 +24,7 @@
         <div class="navSection2">
 
           <ul class="navUl">
-            <li>Categories</li>
+            <li>Check Status</li>
             <li>About us</li>
             <li>Help desk</li>
 
@@ -42,7 +42,7 @@
       </div>
       <div class="inputChat">
         <button type="button" class="micIcon" id="startButton" onclick="startDictation()"> <i class="fa-solid fa-microphone-lines"></i></button>
-        <button type="button" class="micIcon" id="stopButton" style="display: none;"><img src="./resources/images/micon.gif"/> </button>
+        <button type="button" class="micIcon" id="stopButton" style="display: none;"><img src="./resources/images/simple_loading.gif" width="18px" height="22px"/> </button>
 
         <input type="text" name="s" id="transcript" class="InputBtn" placeholder="Write Anything You Want to Know">
         <a href="./screens/chat.html">
@@ -60,6 +60,7 @@
       recognition.continuous = false;
       recognition.interimResults = false;
       recognition.lang = 'en-US';
+      // recognition.lang = 'hi-IN';
       recognition.start();
 
       recognition.onresult = function (e) {
