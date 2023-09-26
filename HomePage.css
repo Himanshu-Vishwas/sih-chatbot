@@ -74,11 +74,11 @@ nav {
 
 }
 .HeroSection {
-  padding-top: 100px;
+  padding-top: 70px;
 
     display: flex;
     flex-direction: column;
-    height: 86vh;
+    height: 100vh;
     width: 100%;
     background: rgb(1,59,255);
     background: linear-gradient(0deg, rgba(1,59,255,1) 0%, rgba(248,245,254,1) 67%, #ffffff 87% 100%);
@@ -90,7 +90,7 @@ nav {
     width: 70%;
     /* align-self: center; */
     text-align: center;
-    margin: 10px auto;
+    margin: 20px auto;
    line-height: 0.8;
 }
 .word{
@@ -140,6 +140,9 @@ transition: all 900ms;
   scale: 1.05;
 }
 
+.micIcon:hover{
+  scale:0.9;
+}
 
 
 .InputBtn{
