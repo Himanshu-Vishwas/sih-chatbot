@@ -4,25 +4,32 @@
   box-sizing: border-box;
 }
 header {
-  background-color: #7aa8c5;
   width: 100%;
-  height: 6rem;
+  height: 14vh;
+  box-shadow:0px 2px 5px rgba(41, 39, 39, 0.1);
+  backdrop-filter: drop-shadow(10px 8px 10px rgb(245, 247, 245));
+  /* background-color: aqua; */
+
 }
 
 nav {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0 auto;
   width: 90%;
   height: 100%;
-  background-color: red;
+  /* background-color: red; */
+  
 }
 .navSection1 {
   display: flex;
   align-items: center;
- 
-  gap:23px;
+  gap:18px;
+}
+.navSection1 p {
+  font-size: x-large;
+  font-weight: 700;
 }
 .navSection2 {
   display: flex;
@@ -31,29 +38,89 @@ ul {
   display: flex;
   gap:12px;
 }
-li {
+ul li {
   display: flex;
   text-decoration: none;
   list-style: none;
+  font-size: larger;
+  font-weight: 700;
   
 }
 .HeroSection {
     display: flex;
     flex-direction: column;
-    height: calc(100%-6rem);
+    height: 86vh;
     width: 100%;
     background: rgb(1,59,255);
-    background: linear-gradient(0deg, rgba(1,59,255,1) 0%, rgba(248,245,254,1) 67%, rgba(255,241,228,1) 87% 100%);
+    background: linear-gradient(0deg, rgba(1,59,255,1) 0%, rgba(248,245,254,1) 67%, #ffffff 87% 100%);
 }
 
 .mainHead{
     font-weight: bolder;
     font-size: 10rem;
+    width: 70%;
+    /* align-self: center; */
     text-align: center;
+    margin: 10px auto;
+   line-height: 0.8;
 }
 .inputChat{
   background-color: rgb(255, 0, 8);
   align-items: center;
   display: flex;
   margin: 0 auto;
+  padding:1.5rem 3rem;
+  margin-top: 1.2rem;
+  border-radius: 3rem;
+  border: 10px solid hsla(0,0%,100%,.5);
+  background: #fff;
+  background-clip: padding-box;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.AiBtn{
+  font: bold;
+  font-size: large;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: none;
+  background: rgb(171,51,255);
+background: linear-gradient(243deg, rgba(171,51,255,1) 19%, rgba(11,164,255,1) 100%);
+color: white;
+background: linear-gradient(270deg, rgba(171,51,255,1) 0%, rgba(11,164,255,1) 100%);
+
+}
+
+
+.InputBtn{
+  border: none;
+  padding: 1rem 2rem;
+  background-color: rgba(233,236,241,1);
+  border-radius: 1rem;
+  width: 60%;
+  gap: 5px;
+  color: black;
+
+  font-size: large;
+}
+.micIcon{
+  background: rgb(224,237,255);
+background: linear-gradient(81deg, rgba(224,237,255,1) 19%, rgba(250,224,255,1) 100%);
+ padding: 1rem 1.5rem;
+ border: none;
+ border-radius: 1rem;
+}
+.micIcon i{
+  font-size: 1.5rem;
+  background: rgb(171,51,255);
+  background: linear-gradient(243deg, rgba(171,51,255,1) 19%, rgba(11,164,255,1) 100%);
+  background: linear-gradient(270deg, rgba(171,51,255,1) 0%, rgba(11,164,255,1) 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
 }
