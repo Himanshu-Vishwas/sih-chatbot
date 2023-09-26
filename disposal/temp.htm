@@ -1,50 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot Interface</title>
-    <link rel="stylesheet" href="./mycss.css"> <!-- Link to your CSS file -->
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700,300">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.1.2/css/material-design-iconic-font.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400&family=Finger+Paint&display=swap">
-  </head>
+    <title>SweetAlert with Unique Reference Number</title>
+    <!-- Include SweetAlert library -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <img src="./images/images.jpeg" alt="Chatbot Logo" class="profile">
-            <h1><span style="font-weight: 5;">Chat with</span> Police Help Desk</h1>
-        </div>
-        <!-- <nav class="navbar">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav> -->
-        
-    </header>
-    <div class="uneven-width-div">
-   
-       <span style="font-weight:1;color:#d3d1d1;font-size: 15px;float: right;margin-right: 10%;margin-top: 1%;">We reply immediately</span> 
-    </div>
-    <div class="card chat" style="   width: 70%;
-    background-color: #CCCCCC;margin:auto">
-        <!-- <div id="header">
-          <h1>AI ChatBot</h1>
-        </div> -->
-        <div id="message-section">
-          <div class="message" id="bot"><span id="bot-response">Hello...</span></div>
-        </div>
-        <div id="input-section">
-          <input id="input" type="text" placeholder="Type a message" autocomplete="off" autofocus="autofocus"style="   width: 80%;margin:auto;border-radius:23px"/>
-          <button class="send" onclick="sendMessage()">
-            <div class="circle"><i class="zmdi zmdi-mail-send" style="color: rgb(29, 95, 177);font-size: 70px;padding-bottom: 4px;margin-bottom: 25px;margin-left: 0;"></i></div>
-          </button>
-        </div>
-      </div>
-      <script src="../script.js"></script>
+
+<button id="dis">Generate Reference Number</button>
+
+<script>
+// Function to generate a unique reference number
+function generateUniqueReferenceNumber() {
+    // Generate a timestamp-based reference number (you can use a more sophisticated method if needed)
+    const timestamp = Date.now(); // Get the current timestamp
+    const referenceNumber = `REF${timestamp}`; // Create a reference number using the timestamp
+    return referenceNumber;
+}
+
+// Function to display the SweetAlert popup with the reference number
+function showUniqueReferenceNumber() {
+    const referenceNumber = generateUniqueReferenceNumber();
+
+    // Display the unique reference number in a SweetAlert popup
+    Swal.fire({
+        title: 'Unique Reference Number',
+        text: `Your reference number is: ${referenceNumber}`,
+        icon: 'success'
+    });
+}
+
+// Add a click event listener to the button
+const generateButton = document.getElementById('dis');
+generateButton.addEventListener('click', showUniqueReferenceNumber);
+</script>
+
 </body>
 </html>
