@@ -30,13 +30,15 @@ const userMessage = [
     ["you are funny"],
     ["i dont know"],
     ["boring"],
-    ["im tired"]
+    ["im tired"],
+    ["Hello, I need to report a police case."],
+    ["My phone was stolen."],
   ];
   const botReply = [
-    ["Hello!", "Hi!", "Hey!", "Hi there!"],
+    ["Hello! I am jini. How may i help you?", "Hi! I am jini. How may i help you?", "Hey! I am jini. How may i help you?", "Hi there! I am jini. How may i help you?"],
     ["Okay"],
     ["Yes I am! "],
-    ["I'm sorry about that. But I like you dude."],
+    ["I'm sorry about that. But I like you."],
     [
       "Fine... how are you?",
       "Pretty well, how are you?",
@@ -51,9 +53,9 @@ const userMessage = [
       "I don't know actually"
     ],
     ["I am always young."],
-    ["I am just a bot", "I am a bot. What are you?"],
-    ["Sabitha Kuppusamy"],
-    ["I am nameless", "I don't have a name"],
+    ["I am just a bot", "I am Jini. What are you?"],
+    ["Himanshu Vishwas"],
+    ["I am Jini.", "I have a name which is Jini."],
     ["I love you too", "Me too"],
     ["Have you ever felt bad?", "Glad to hear it"],
     ["Why?", "Why? You shouldn't!", "Try watching TV", "Chat with me."],
@@ -67,11 +69,13 @@ const userMessage = [
     ["Glad to hear it"],
     ["Say something interesting"],
     ["Sorry for that. Let's chat!"],
-    ["Take some rest, Dude!"]
+    ["Take some rest!"],
+    ["Of course, I can help you with that. Please provide me with some details about the incident."],
+    ["I'm sorry to hear that. Please provide me with some details about the incident."]
   ];
   
   const alternative = [
-    "Same here, dude.",
+    "Same here.",
     "That's cool! Go on...",
     "Dude...",
     "Ask something else...",
@@ -147,9 +151,9 @@ const userMessage = [
   function containMessageCheck(string) {
     let expectedReply = [
       [
-        "Good Bye, dude",
+        "Good Bye",
         "Bye, See you!",
-        "Dude, Bye. Take care of your health in this situation."
+        "Bye. Take care of your health in this situation."
       ],
       ["Good Night, dude", "Have a sound sleep", "Sweet dreams"],
       ["Have a pleasant evening!", "Good evening too", "Evening!"],
