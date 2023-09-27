@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700,300">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.1.2/css/material-design-iconic-font.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400&family=Finger+Paint&display=swap">
+<script src="https://kit.fontawesome.com/05d71ec5ea.js" crossorigin="anonymous"></script>
+
   </head>
     <body style="background: linear-gradient(0deg, rgba(1,59,255,1) 0%, rgba(248,245,254,1) 67%, #ffffff 87% 100%);">
  
@@ -40,13 +42,60 @@
         <div id="message-section">
           <div class="message" id="bot"><span id="bot-response">Hello...</span></div>
         </div>
-        <div id="input-section">
-          <input id="input" type="text" placeholder="Type a message" autocomplete="off" autofocus="autofocus"style="   width: 80%;margin:auto;border-radius:23px;padding:0px 50px"/>
-          <button class="send" onclick="sendMessage()">
-            <div class="circle"><i class="zmdi zmdi-mail-send" style="color: rgb(29, 95, 177);font-size: 70px;padding-bottom: 4px;margin-bottom: 25px;margin-left: 0;"></i></div>
+        <div id="input-section" style="margin-left: 0px;left:0;padding-left: 0;">
+          <input id="input" type="text" placeholder="Type a message" autocomplete="off" autofocus="autofocus"style="   width: 80%;margin:auto;border-radius:23px;padding:0px 40px;margin-right:0"/>
+          <button class="send" onclick="sendMessage()" style="margin-left: 0;padding-left: 0px;">
+            <div class="circle"><i class="zmdi zmdi-mail-send" style="color: rgb(242, 244, 246);font-size: 70px;padding-bottom: 4px;margin-bottom: 25px;margin-left: 0;margin-right: 0px;"></i></div>
           </button>
         </div>
       </div>
       <script src="../script.js"></script>
+      <script>
+        function startDictation() {
+      if (window.hasOwnProperty('webkitSpeechRecognition')) {
+        var recognition = new webkitSpeechRecognition();
+  
+        recognition.continuous = false;
+        recognition.interimResults = false;
+        recognition.lang = 'en-US';
+        // recognition.lang = 'hi-IN';
+        recognition.start();
+  
+        recognition.onresult = function (e) {
+          document.getElementById('input').value = e.results[0][0].transcript;
+          recognition.stop();
+          document.getElementById('labnol').submit();
+        };
+        recognition.onerror = function (e) {
+          recognition.stop();
+        };
+      }
+    }
+          // Function to start the microphone
+          function startMicrophone() {
+              navigator.mediaDevices.getUserMedia({ audio: true })
+              .then(function(stream) {
+                  // You can do something with the microphone stream here
+                  console.log("Microphone is active");
+                  document.getElementById("startButton").style.display = "none";
+                  document.getElementById("stopButton").style.display = "inline";
+              })
+              .catch(function(error) {
+                  console.error("Error accessing microphone: " + error);
+              });
+          }
+  
+          // Function to stop the microphone
+          function stopMicrophone() {
+              // You can stop the microphone stream here if needed
+              console.log("Microphone is stopped");
+              document.getElementById("startButton").style.display = "inline";
+              document.getElementById("stopButton").style.display = "none";
+          }
+  
+          // Add event listeners to the buttons
+          document.getElementById("startButton").addEventListener("click", startMicrophone);
+          document.getElementById("stopButton").addEventListener("click", stopMicrophone);
+      </script>
 </body>
 </html>

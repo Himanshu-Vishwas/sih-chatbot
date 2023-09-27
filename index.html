@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="HomePage.css">
   <script src="https://kit.fontawesome.com/05d71ec5ea.js" crossorigin="anonymous"></script>
+  
   <title>AI ChatBot</title>
 </head>
 
@@ -23,7 +24,7 @@
         <div class="navSection2">
 
           <ul class="navUl">
-            <li>Categories</li>
+            <li>Check Status</li>
             <li>About us</li>
             <li>Help desk</li>
 
@@ -40,14 +41,69 @@
         </h1>
       </div>
       <div class="inputChat">
-        <button type="button" class="micIcon"> <i class="fa-solid fa-microphone-lines"></i></button>
-        <input type="text" class="InputBtn " placeholder="Write Anything You Want to Know">
-        <a href="./screens/chat.html">
-        <button type="button" class="AiBtn"><i class="fa-solid fa-star"></i>Start</button>
+        <button type="button" class="micIcon" id="startButton" onclick="startDictation()"> <i class="fa-solid fa-microphone-lines"></i></button>
+        <button type="button" class="micIcon" id="stopButton" style="display: none;"><img src="./resources/images/simple_loading.gif" width="18px" height="22px"/> </button>
+
+        <input type="text" name="s" id="transcript" class="InputBtn" placeholder="Write Anything You Want to Know">
+        <!-- <a href="./screens/chat.html"> -->
+        <button type="button" onclick="gotoChat()" class="AiBtn"><i class="fa-solid fa-star"></i>Start</button>
       </a>
       </div>
 
     </section>
+
+    <script>
+      function gotoChat() {
+        var inputData = document.getElementById("transcript").value;
+        var encodedData = encodeURIComponent(inputData);
+        window.location.href = "./screens/chat.html?data=" + encodedData;
+      }
+      function startDictation() {
+    if (window.hasOwnProperty('webkitSpeechRecognition')) {
+      var recognition = new webkitSpeechRecognition();
+
+      recognition.continuous = false;
+      recognition.interimResults = false;
+      recognition.lang = 'en-US';
+      // recognition.lang = 'hi-IN';
+      recognition.start();
+
+      recognition.onresult = function (e) {
+        document.getElementById('transcript').value = e.results[0][0].transcript;
+        recognition.stop();
+        document.getElementById('labnol').submit();
+      };
+      recognition.onerror = function (e) {
+        recognition.stop();
+      };
+    }
+  }
+        // Function to start the microphone
+        function startMicrophone() {
+            navigator.mediaDevices.getUserMedia({ audio: true })
+            .then(function(stream) {
+                // You can do something with the microphone stream here
+                console.log("Microphone is active");
+                document.getElementById("startButton").style.display = "none";
+                document.getElementById("stopButton").style.display = "inline";
+            })
+            .catch(function(error) {
+                console.error("Error accessing microphone: " + error);
+            });
+        }
+
+        // Function to stop the microphone
+        function stopMicrophone() {
+            // You can stop the microphone stream here if needed
+            console.log("Microphone is stopped");
+            document.getElementById("startButton").style.display = "inline";
+            document.getElementById("stopButton").style.display = "none";
+        }
+
+        // Add event listeners to the buttons
+        document.getElementById("startButton").addEventListener("click", startMicrophone);
+        document.getElementById("stopButton").addEventListener("click", stopMicrophone);
+    </script>
 
 
     <!-- Footer -->
@@ -88,7 +144,7 @@
           <a href="#"><i class="fab fa-twitter social-icon"></i></a>
       </div>
       <div class="copyright">
-          &copy; 2023 Cbot. Made with <span style="color: red;">❤</span>Team X
+          &copy; 2023 Jini. Made with <span style="color: red;">❤</span> HardPass
       </div>
   </footer>
   

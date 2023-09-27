@@ -31,8 +31,11 @@ const userMessage = [
     ["i dont know"],
     ["boring"],
     ["im tired"],
-    ["Hello, I need to report a police case."],
-    ["My phone was stolen."],
+    ["need help","i need help"],
+    ["police"],
+    ["i have lost my phone"],
+    ["i need to report a police case"],
+    ["My phone was stolen"],
   ];
   const botReply = [
     ["Hello! I am jini. How may i help you?", "Hi! I am jini. How may i help you?", "Hey! I am jini. How may i help you?", "Hi there! I am jini. How may i help you?"],
@@ -70,6 +73,9 @@ const userMessage = [
     ["Say something interesting"],
     ["Sorry for that. Let's chat!"],
     ["Take some rest!"],
+    ["How can I help you?"],
+    ["Please call 000"],
+    ["Sure, I can help you with that. Please provide me with some details about the incident. <a href='./forms/form1.html'>Click here to report</a>"],
     ["Of course, I can help you with that. Please provide me with some details about the incident."],
     ["I'm sorry to hear that. Please provide me with some details about the incident."]
   ];
@@ -95,6 +101,9 @@ const userMessage = [
   }
   
   function sendMessage() {
+    console.log("Microphone is stopped");
+              document.getElementById("startButton").style.display = "inline";
+              document.getElementById("stopButton").style.display = "none";
     const inputField = document.getElementById("input");
     let input = inputField.value.trim();
     input != "" && output(input);

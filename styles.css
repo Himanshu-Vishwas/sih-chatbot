@@ -17,7 +17,7 @@
     /* background-color: white; */
     margin-left: 30vw;
     margin-top: 5vw;
-    box-shadow: 2vw 2vw 12vw 3vw #ccc;
+    /* box-shadow: 2vw 2vw 12vw 3vw #ccc; */
     
   }
   body .card #header {
@@ -125,4 +125,8 @@
     font-size: 3vw;
     margin-left: -1vw;
     margin-top: 1vw;
+  }
+  .micIcon{
+    height: 30px;
+    width: 30px;
   }
