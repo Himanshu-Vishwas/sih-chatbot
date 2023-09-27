@@ -6,8 +6,13 @@
   box-sizing: border-box;
   
 }
+
 a{
   text-decoration: none;
+  color: black;
+  font-size: x-large;
+  font-weight: 700;
+  transition: all 900ms;
 }
 header {
   width: 100%;
