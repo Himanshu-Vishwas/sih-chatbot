@@ -31,7 +31,7 @@ const userMessage = [
     ["i dont know"],
     ["boring"],
     ["im tired"],
-    ["need help","i need help"],
+    ["need help","i need help","I need help"],
     ["police"],
     ["i have lost my phone"],
     ["i am feeling sick"],
