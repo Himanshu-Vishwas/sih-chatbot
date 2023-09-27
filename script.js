@@ -101,6 +101,9 @@ const userMessage = [
   }
   
   function sendMessage() {
+    console.log("Microphone is stopped");
+              document.getElementById("startButton").style.display = "inline";
+              document.getElementById("stopButton").style.display = "none";
     const inputField = document.getElementById("input");
     let input = inputField.value.trim();
     input != "" && output(input);
