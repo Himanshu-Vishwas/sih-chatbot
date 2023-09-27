@@ -45,11 +45,11 @@
 
     <div id="input-section">
       <button type="button" class="micIcon" id="startButton"  onclick="startDictation()"> <i
-          class="fa-solid fa-microphone-lines"></i>
+          class="fa-solid fa-microphone-lines" id="micoffimg"></i>
       </button>
 
       <button type="button" class="micIcon" id="stopButton" style="display: none;">
-        <div class="image-mic" style="margin-bottom: 10px;"><img
+        <div class="image-mic" style="margin: -10px;"><img
           src="../resources/images/simple_loading.gif" width="20px" height="20px" /></div> 
       </button>
 
@@ -124,6 +124,7 @@
       console.log("Microphone is stopped");
       document.getElementById("startButton").style.display = "inline";
       document.getElementById("stopButton").style.display = "none";
+      document.getElementById("micoffimg").style.margin = "-20px";
     }
 
     // Add event listeners to the buttons
