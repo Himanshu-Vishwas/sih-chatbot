@@ -34,7 +34,7 @@ const userMessage = [
     ["need help","i need help","I need help"],
     ["police"],
     ["i have lost my phone","I have lost my phone"],
-    ["i am feeling sick","I am felling sick"],
+    ["i am feeling sick","I am felling sick","I am sick","i am sick"],
     ["nearby hospital"],
     ["book an appointment"],
     ["i need to report a police case"],
