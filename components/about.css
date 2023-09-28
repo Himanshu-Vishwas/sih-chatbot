@@ -289,6 +289,11 @@ border: 4px solid black;
     border-radius: 10px;
     padding: 10px 25px;
     cursor: pointer;
+    transition: all 900ms;
+}
+.button-contact:hover{
+  scale:1.08;
+  background-color:#377e0b ;
 }
 
 
