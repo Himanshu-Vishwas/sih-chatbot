@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chatbot Interface</title>
-  <link rel="stylesheet" href="./chat.css"> <!-- Link to your CSS file -->
+  <title>Jini - AI Chatbot</title>
+  <link rel="stylesheet" href="./chat.css">
+   <!-- Link to your CSS file -->
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700,300">
   <link rel="stylesheet"
@@ -25,16 +26,21 @@
       <img src="../HomePageStuff/logo.png" class="chatLogoImg" alt="Chatbot Logo" class="profile">
       <h1>Chat with <span class="jini">Jini</span></h1>
     </div>
+    <div class="chatnav">
+      <ul id="chatnavs">
+        <li><a href="./status/check_status.html">Check Status</a></li>
+        <li>About us</li>
+      </ul>
+    </div>
 
 
   </header>
-  <div class="uneven-width-div">
+  <!-- <div class="uneven-width-div">
 
     <span style="font-weight:1;color:white;font-size: 15px;float: right;margin-right: 10%;margin-top: 1%;">We reply
       immediately</span>
-  </div>
-  <div class="card chat" style="   width: 70%;
-    background-color: #CCCCCC;margin:auto">
+  </div> -->
+  <div class="card chat">
     <!-- <div id="header">
           <h1>AI ChatBot</h1>
         </div> -->
@@ -49,8 +55,8 @@
       </button>
 
       <button type="button" class="micIcon" id="stopButton" style="display: none;">
-        <div class="image-mic" style="margin: -10px;"><img
-          src="../resources/images/simple_loading.gif" width="20px" height="20px" /></div> 
+        <div class="image-mic"><img
+          src="../resources/images/simple_loading.gif" style="margin: -10px -10px 0 -10px;" width="20px" height="20px" /></div> 
       </button>
 
       <input id="input" type="text" placeholder="Type a message" class="inputBtnChat" autocomplete="off" autofocus="autofocus"
