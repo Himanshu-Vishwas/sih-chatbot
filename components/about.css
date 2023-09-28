@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -122,14 +123,70 @@ header {
     box-shadow: rgba(255, 255, 255, 1) 0px 0px 0px 2px, rgba(255, 255, 255, 1)0px 4px 6px -1px, rgba(255, 255, 255, 1) 0px 1px 0px inset;
 }
 
+
+.btn {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 10px 5px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 900ms;
+}
+.btn:hover{
+  background-image: linear-gradient(144deg,#7a08cc, #3517f7);
+  scale: 1.1;
+}
+
+.btn:active,
+.btn:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    font-size: 20px;
+    min-width: 150px;
+  }
+}
+
+
 .cardSectionContainer{
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   /* background-color: red; */
-  height: 80vh;
+  height: 90vh;
   align-items: center;
   gap: 1rem;
+  background: linear-gradient(to bottom, rgb(1, 59, 255), rgba(171,51,255,1));
+  padding-bottom:2rem;
+}
+.memberHead{
+  padding-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  
+}
+.memberHead:hover{
+  border-bottom: 2px solid rgba(171,51,255,1);
 }
 .cardSection1{
   display: flex;
@@ -150,6 +207,7 @@ header {
   flex-direction: row;
   gap: 20px;
   width: 90%;
+  padding-bottom: 2rem;
 }
 .card{
   /* background-color: dodgerblue; */
@@ -157,6 +215,11 @@ header {
   width:25% ;
   display: flex;
   border-top-right-radius: 3rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-end-end-radius: 2rem;
+  background: linear-gradient(81deg, rgba(224,237,255,1) 19%, rgba(250,224,255,1) 100%);
+  gap :1rem;
 }
 .image {
 width: 50%;
@@ -168,10 +231,14 @@ width: 50%;
   height: 100%;
   border-radius: 1rem;
 }
-.Profession{
-  width: 50%;
-  /* background-color: cadetblue; */
+.profession {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-family: 'Proza Libre', sans-serif;
 }
+
+
 
 
 
