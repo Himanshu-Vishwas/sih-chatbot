@@ -63,9 +63,9 @@ header {
     list-style: none;
     font-size: larger;
     font-weight: 700;
-    transition: all 900ms;
-    
+    transition: all 900ms;    
   }
+  
   .navUl li:hover{
     color: #1D98FF;
     scale: 1.1;
