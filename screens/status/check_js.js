@@ -6,7 +6,7 @@ function trackPNR() {
         Swal.fire({
             icon: 'success',
             title: 'Complaint Accepted',
-            text: `PNR Number: ${pnrNumber}`,
+            text: `Reference Number: ${pnrNumber}`,
         });
 
         // Update the status display
