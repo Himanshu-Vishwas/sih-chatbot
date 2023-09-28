@@ -5,12 +5,12 @@ function trackPNR() {
         // Show a success message using SweetAlert
         Swal.fire({
             icon: 'success',
-            title: 'Complaint Accepted',
+            title: 'Request Accepted',
             text: `Reference Number: ${pnrNumber}`,
         });
 
         // Update the status display
-        document.getElementById("statusDisplay").textContent = "Complaint accepted";
+        document.getElementById("statusDisplay").textContent = "Request accepted";
     } else {
         // Show an error message using SweetAlert
         Swal.fire({
