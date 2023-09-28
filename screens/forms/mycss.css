@@ -161,3 +161,7 @@
   #dis1{
     margin: 20px auto 40px;
   }
+  .checks{
+    text-align: left;
+    display: block;
+  }
