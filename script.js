@@ -87,9 +87,7 @@ const userMessage = [
   ];
   
   const alternative = [
-    "Same here.",
-    "That's cool! Go on...",
-    "Dude...",
+    "Come again...",
     "Ask something else...",
     "Hey, I'm listening..."
   ];
