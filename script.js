@@ -34,8 +34,9 @@ const userMessage = [
     ["need help","i need help","I need help"],
     ["police"],
     ["i have lost my phone","I have lost my phone"],
-    ["i am feeling sick","I am felling sick"],
+    ["i am feeling sick","I am felling sick","I am sick","i am sick"],
     ["nearby hospital"],
+    ["book an appointment","book appointment"],
     ["i need to report a police case"],
     ["My phone was stolen"],
   ];
@@ -77,17 +78,16 @@ const userMessage = [
     ["Take some rest!"],
     ["How can I help you?"],
     ["Please call 000"],
-    ["Sure, I can help you with that. Please provide me with some details about the incident. <a href='./forms/form1.html'>Click here to report</a>"],
+    ["Sure, I can help you with that. Please provide me with some details about the incident. <a href='./forms/form1.html' target='_blank'>Click here to report</a>"],
     ["I'm sorry to hear that you're feeling sick. It's essential to prioritize your health. If you have specific symptoms or concerns, I recommend consulting a medical professional or contacting your college's health services for guidance on what to do next. If you have any questions or need information related to your studies or college, feel free to ask, and I'll do my best to assist you."],
-    ["Nearby hospital is <a href='https://www.google.com/maps/search/?api=1&query=hospital' target='_blank'>here</a>"],
+    ["Nearby hospitals are <a href='https://www.google.com/maps/search/?api=1&query=hospital' target='_blank'>here</a>"],
+    ["Sure, Please fill your details <a href='./forms/form2.html' target='_blank'>here</a> to fix an appointment to the nearest government hospital."],
     ["Of course, I can help you with that. Please provide me with some details about the incident."],
     ["I'm sorry to hear that. Please provide me with some details about the incident."]
   ];
   
   const alternative = [
-    "Same here.",
-    "That's cool! Go on...",
-    "Dude...",
+    "Come again...",
     "Ask something else...",
     "Hey, I'm listening..."
   ];
