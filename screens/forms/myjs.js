@@ -27,6 +27,8 @@ function showUniqueReferenceNumber() {
         title: 'Unique Reference Number',
         text: `Your reference number is: ${referenceNumber}`,
         icon: 'success'
+    }).then(function() {
+        window.location.href = "../../screens/status/check_status.html";
     });
 }
 
