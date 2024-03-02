@@ -31,6 +31,13 @@ header {
     /* background-color: red; */
     
   }
+  a{
+    text-decoration: none;
+    color: black;
+    font-size: x-large;
+    font-weight: 700;
+    transition: all 900ms;
+  }
   .navSection1 {
     
     display: flex;
